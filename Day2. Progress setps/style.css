@@ -5,6 +5,10 @@
     --line-border-empty:#e0e0e0;
 }
 
+.container{
+    text-align: center;
+}
+
 body{
     background-color: #f6f7fb;
     display: flex;
@@ -63,7 +67,8 @@ body{
 
 .progress-circle.active {
     border-color: var(--line-border-fill);
-    transition: border .5s ease;
+    transition: border .5s ease 0.1s;
+    transform: scale(1.1);
 }
 
 .btn {
