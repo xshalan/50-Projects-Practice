@@ -1,0 +1,11 @@
+@import url("https://fonts.googleapi.com/css?family=Muli&display=swap");
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    font-family: Muli;
+}
+
