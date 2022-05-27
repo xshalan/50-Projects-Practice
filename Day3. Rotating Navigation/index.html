@@ -1,15 +1,62 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8"/>
-        <meta name="viewport" content="width=device-width initial-scale=1.0"/>
-        <link rel="stylesheet" href="style.css"/>
-        <title>Rotating Navigation</title>
-    </head>
-    <body>
-        <div class="container">
 
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Rotating Navigation</title>
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="circle-container">
+            <div class="circle">
+                <button id="close">
+                    <i class="fas fa-times"></i>
+                </button>
+                <button id="open">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
         </div>
-        <script src="script.js"></script>
-    </body>
+
+        <div class="content">
+            <h1>Article Example</h1>
+            <small>Author Name</small>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque tempore dolor quas voluptatum veniam
+                obcaecati asperiores, architecto iusto hic maxime commodi explicabo corporis optio rerum adipisci sit
+                aut dolorum. Officiis explicabo corrupti deleniti voluptatum fugit. Id deleniti, vero hic libero unde
+                veritatis sapiente architecto illum est a in provident amet, omnis nobis aliquid quisquam doloremque!
+                Quia aut officiis nemo ullam rem eius unde quibusdam quod nostrum ut iste delectus dolores eaque ratione
+                voluptas natus, nulla vitae. Quisquam delectus ullam maxime praesentium minima omnis exercitationem ut
+                debitis repellat soluta rerum architecto odio, totam eaque non tenetur nemo nostrum laudantium corrupti
+                quaerat?</p>
+
+
+            <h3>Photo example</h3>
+            <img src="https://images.unsplash.com/photo-1653493170506-3fc43d3baf5b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
+                alt="bridge in the sea" />
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Architecto minus quae beatae voluptatibus
+                placeat numquam, nulla fugiat magni, praesentium rerum id, illo neque molestias non quo earum
+                asperiores! Minus, qui aut delectus excepturi sunt aspernatur est? Exercitationem quae blanditiis ex nam
+                recusandae architecto? Ipsam maxime sed illum eveniet debitis quis nostrum fuga possimus labore
+                asperiores ad alias maiores quod quaerat quia fugiat, numquam, blanditiis natus.</p>
+        </div>
+    </div>
+    <nav>
+        <ul>
+            <li><i class="fa fa-home">Home</i></li>
+            <li><i class="fa fa-user-alt">About</i></li>
+            <li><i class="fa fa-envelope">Contact</i>
+            <li>
+        </ul>
+    </nav>
+    <script src="script.js"></script>
+</body>
+
 </html>

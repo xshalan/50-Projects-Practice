@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+
+body {
+    font-family: 'Lato';
+    overflow-x: hidden;
+    background-color: #333;
+    color: #222;
+    margin: 0;
+}
+
+.container {
+    font-family: inherit;
+    background-color: #f3f3f3;
+    transform-origin: top left;
+    transition: transform 0.5s linear;
+    width: 100vw;
+    min-height: 100vh;
+    padding: 50px;
+}
+
+.container.show-nav {
+    transform: rotate(-20deg);
+}
+
+.circle-container {
+    position: fixed;
+    top: -50px;
+    left: -50px;
+}
+
+.circle {
+    background-color: #ff7979;
+    height: 120px;
+    width: 120px;
+    border-radius: 50%;
+    position: relative;
+    transition: transform 0.5s linear;
+}
+
+.container.show-nav .circle {
+    transform: rotate(-70deg);
+}
+
+.circle button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background-color: transparent;
+    color: #fff;
+    border: 0;
+    font-size: 22px;
+    transition: transform 0.5s linear
+}
+
+.circle button#open {
+    left: 50%;
+}
+
+
+.circle button#close {
+    left: 20%;
+    transform: rotate(90deg);
+
+}
+
+.content img {
+    max-width: 90%;
+}
+
+.content {
+    max-width: 1000px;
+    margin: 50px auto;
+}
+
+.content h1 {
+    margin: 0;
+}
+
+.content small {
+    color: #333;
+    font-style: italic;
+}
+
+.content p {
+    line-height: 1.5;
+}
+
+nav {
+    position: fixed;
+    bottom: 40px;
+    left: 0;
+}
+
+nav ul {
+    list-style-type: none;
+    padding-left: 20px;
+}
+
+nav ul li {
+    color: #fff;
+    margin: 30px 0;
+    transform: translateX(-150%);
+    transition: transform .5s ease-in;
+}
+
+nav ul li i {
+    font-size: 15px;
+    margin-right: 10px;
+}
+
+nav ul li+li {
+    margin-left: 15px;
+}
+
+nav ul li+li+li {
+    margin-left: 20px;
+}
+
+.container.show-nav+nav ul li {
+    transform: translateX(0);
+    transition-delay: 0.5s;
+}
