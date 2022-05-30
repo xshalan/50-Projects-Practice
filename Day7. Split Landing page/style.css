@@ -1,15 +1,109 @@
 @import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
 
+:root{
+    --left-bg-color:rgba(64, 62, 212, 0.7);
+    --right-bg-color:rgba(43,43,43,.7);
+    --left-btn-hover-color:rgb(42, 39, 189);
+    --right-btn-hover-color:rgba(28,122,28,1);
+}
 * {
     box-sizing: border-box;
 }
 
 body {
     font-family: 'Lato';
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     margin: 0;
+    height: 100vh;
     overflow-x: hidden;
 }
+
+
+.container {
+    position: relative;
+    width: 100%;
+    height:100%;
+    background: #333;
+}
+
+.split {
+    position: absolute;
+    height: 100%;
+    width: 50%;
+
+}
+
+.split.left {
+    left:0;
+    background: url('ps.png') ;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+.split.right {
+    right:0;
+    background: url('xbox.png') ;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.split.left::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color:var(--left-bg-color);
+}
+.split.right::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color:var(--right-bg-color);
+}
+
+h1 {
+    color: white;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    font-size: 4rem;
+    transform: translateX(-50%);
+    white-space: nowrap;
+}
+
+.btn {    
+    padding: 1.5rem;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 40%;
+    left:50%;
+    color: white;
+    border: #fff solid .2rem;
+    transform: translateX(-50%);
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    width: 15rem;
+    ;
+}
+
+.split.left .btn:hover{
+    background-color: var(--left-btn-hover-color);
+    border-color: var(--left-btn-hover-color);
+}
+
+.split.right .btn:hover{
+    background-color:var(--right-btn-hover-color);
+    border-color: var(--right-btn-hover-color);
+}
+
+/* 
+.split.left:hover{
+    width: 80%;
+    transition: width .5s ease;
+    
+} */
