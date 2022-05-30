@@ -100,10 +100,22 @@ h1 {
     background-color:var(--right-btn-hover-color);
     border-color: var(--right-btn-hover-color);
 }
+.split.left,.split.right{
+    content: '';
+    transition: all 1000ms ease-in-out;
+}
+.hover-left .left{
+    width: 70%;
+}
 
-/* 
-.split.left:hover{
-    width: 80%;
-    transition: width .5s ease;
-    
-} */
+.hover-left .right{
+    width: 30%;
+}
+.hover-right .left{
+    width: 30%;
+}
+
+.hover-right .right{
+    width: 70%;
+}
+
