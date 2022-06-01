@@ -1,0 +1,38 @@
+
+
+*{
+    box-sizing: border-box;
+}
+
+body {
+    background-color:  rgb(161, 100, 223);
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 0;
+    overflow: hidden;
+}
+
+.button-board button {
+    margin: 1rem;
+    padding: 1.5rem 3rem;
+    font-size: 24px;
+    outline: none;
+    border: 0;
+    background-color: rgba(0,0,0,.4);
+    border-radius: 5px;
+    color: white;
+}
+
+.button-board button:hover{
+    outline: none;
+    cursor: pointer;
+    opacity: 0.9;
+}
+
+.button-board button:active{
+   transform: scale(.98);
+}
