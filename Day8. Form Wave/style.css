@@ -1,0 +1,12 @@
+* {
+    box-sizing: border-box;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    margin: 0;
+    overflow: hidden;
+    background-color: rgb(77, 133, 218);
+}
