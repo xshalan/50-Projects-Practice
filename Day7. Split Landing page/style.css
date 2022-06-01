@@ -102,7 +102,7 @@ h1 {
 }
 .split.left,.split.right{
     content: '';
-    transition: all 1000ms ease-in-out;
+    transition: all 1000ms ease;
 }
 .hover-left .left{
     width: 70%;
@@ -118,4 +118,17 @@ h1 {
 .hover-right .right{
     width: 70%;
 }
+
+
+@media (max-width:800px) {
+    h1{
+        font-size: 1.5rem;
+    }
+    .btn{
+        padding: 1rem;
+        width: 8rem;
+        font-size: .9rem;
+    }
+}
+
 
