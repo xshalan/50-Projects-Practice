@@ -38,6 +38,7 @@ body{
     background-color: transparent;
     width: 300px;
     display: block;
+    margin-bottom: 30px;
     border: 0;
     border-bottom: 2px solid white ;
     padding: 15px 0;
@@ -75,8 +76,21 @@ body{
  .form-control input:focus,
  .form-control input.valid {
      outline: none;
+     border-bottom-color: lightblue;
+ }
+ .form-control label span{
+     display: inline-block;
+     font-family: inherit;
+     font-size: 16px;
+     transition: .3s cubic-bezier(1,-0.03,0,.43);
+ }
+ .form-control input:focus + label span,
+ .form-control input:valid + label span{
+     color: lightblue;
+     transform: translateY(-30px);
  }
 
+ 
  
 
  
