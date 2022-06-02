@@ -1,0 +1,17 @@
+
+
+*{
+    box-sizing: border-box;
+}
+
+body {
+    background-color:  rgb(161, 100, 223);
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 0;
+    overflow: hidden;
+}
