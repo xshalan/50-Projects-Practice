@@ -1,11 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato');
 
-
-*{
+* {
     box-sizing: border-box;
 }
 
 body {
-    background-color:  rgb(161, 100, 223);
+    font-family: sans-serif;
+    background-color: #686de0;
     width: 100vw;
     height: 100vh;
     display: flex;
@@ -14,4 +15,39 @@ body {
     flex-wrap: wrap;
     margin: 0;
     overflow: hidden;
+}
+
+.card {
+    background-color: white;
+    border-radius: 10px;
+    padding: 50px 20px;
+    width: 800px;
+    text-align: center;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.joke {
+    max-width: 600px;
+    line-height: 40px;
+    margin: 50px auto;
+}
+.card p {
+    opacity: .5;
+    font-weight: bold;
+}
+
+button:active{
+    transform: scale(.98);
+}
+
+button{
+    background-color: #9f68e0;
+    border: 0;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 10px;
+    color: white;
+    border-radius: 5px;
+    padding: 15px 25px;
+    font-size: 16px;
+}
+button:focus{
+    outline: none;
 }
