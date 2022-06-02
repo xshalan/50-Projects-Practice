@@ -16,3 +16,30 @@ body {
     margin: 0;
     overflow: hidden;
 }
+/* .container{
+    display: flex;
+
+} */
+.card {
+    background-color: #eee;
+    border: 1px solid #999;
+    position: relative;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, .1);
+    padding: 20px;
+    display: inline-flex;
+    align-items: center;
+    margin: 10px;
+    flex-direction: column;
+    font-weight: bold;
+    min-width: 150px;
+}
+
+.card small{
+    position: absolute;
+    top: -20px;
+    color: #555;
+    font-size: 14px;
+    left: 0;
+    text-align: center;
+    width: 100%;
+}
