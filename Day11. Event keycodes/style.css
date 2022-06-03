@@ -12,14 +12,10 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
     margin: 0;
     overflow: hidden;
 }
-/* .container{
-    display: flex;
 
-} */
 .card {
     background-color: #eee;
     border: 1px solid #999;
