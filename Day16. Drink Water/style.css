@@ -51,8 +51,10 @@ body {
     border-radius: 0 0 20px 20px;
     border: 3px solid var(--border-color);
     overflow: hidden;
+    transition: .3s ease;
     
 }
+
 .reamining{
     flex:1;
     display: flex;
@@ -89,6 +91,7 @@ body {
     text-align: center;
     margin: 6px;
     line-height: 10px;
+    transition: .3s ease;
 }
 
 .small-cup.full {
