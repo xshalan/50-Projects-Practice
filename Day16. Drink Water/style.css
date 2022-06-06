@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat');
 
+
+:root{
+    --fill-color:#6ab3f8;
+    --border-color: #144fc6;
+}
 * {
     box-sizing: border-box;
     margin: 0;
@@ -8,12 +13,88 @@
 body {
     background-color: #3494e4;
     font-family: 'Montserrat', sans-serif;
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    align-items: start;
     height: 100vh;
+    overflow: hidden;
     width: 100vw;
     color: white;
 }
 
+.container {
+    margin: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.container h2 {
+    font-weight: bold;
+    text-align: center;
+}
+
+.goal {
+    margin: 12px;
+    text-align: center;
+}
+
+.water-bottle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    color: #144fc6;
+    margin: 16px 0;
+    width: 120px;
+    height: 280px;
+    border-radius: 0 0 20px 20px;
+    border: 3px solid var(--border-color);
+    overflow: hidden;
+}
+.reamining{
+    flex:1;
+}
+.drink-percentage{
+    width: 100%;
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    margin: 0;
+    height: 0;
+    background-color: var(--fill-color);
+    transition: .3s ease;
+}
+.water-bottle p {
+    font-size: 10px;
+}
+
+.water-bottle.small-cup {
+    width: 35px;
+    height: 75px;
+    border: 2px solid var(--border-color);
+    border-radius: 0 0 10px 10px;
+    cursor: pointer;
+    font-size: 12px;
+    justify-content: center;
+    text-align: center;
+    margin: 6px;
+    line-height: 10px;
+}
+
+.small-cup.full {
+    color: white;
+    background-color: var(--fill-color);
+}
+.small-bottles {
+    display: flex;
+    flex-wrap: wrap;
+    width: 200px;
+}
+
+.text{
+    text-align: center;
+    margin: 0 0 5px;
+}
