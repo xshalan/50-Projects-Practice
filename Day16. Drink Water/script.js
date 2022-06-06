@@ -31,10 +31,14 @@ function updateCups(clicked) {
     percentage.innerText = `${(100 / smallCups.length) * (clicked + 1)}%`
     percentage.style.height = `${(100 / smallCups.length) * (clicked + 1)}%`
     const remaining_liters = 2 - (.25 * (clicked + 1))
+    percentage.classList.add('transition')
     liters.innerText = `${remaining_liters}L`
 
     if (remaining_liters == 0) {
         remained.style.height = 0
     }
+    setTimeout(()=>{
+        percentage.classList.remove('transition')
+    },300)
 
 }

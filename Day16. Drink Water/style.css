@@ -1,10 +1,12 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat');
 
 
-:root{
-    --fill-color:#6ab3f8;
+:root {
+    --fill-color: #6ab3f8;
+    --fill-color-opc: #6ab3f86b;
     --border-color: #144fc6;
 }
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -52,19 +54,20 @@ body {
     border: 3px solid var(--border-color);
     overflow: hidden;
     transition: .3s ease;
-    
+
 }
 
-.reamining{
-    flex:1;
+.reamining {
+    flex: 1;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     transition: .5s ease;
-    
+
 }
-.drink-percentage{
+
+.drink-percentage {
     width: 100%;
     font-size: 30px;
     display: flex;
@@ -75,7 +78,38 @@ body {
     height: 0;
     background-color: var(--fill-color);
     transition: .3s ease;
+    position: relative;
+    z-index: 10;
 }
+
+.drink-percentage::before,
+.drink-percentage::after {
+    content: '';
+    height: 0;
+    background-color: var(--fill-color-opc);
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: -10;
+    transform: rotateZ(0);
+    transition: 1s ease-in-out;
+}
+
+.drink-percentage.transition::after {
+    transform: rotateZ(5deg) translateY(-15px);
+    height: 20px;
+    background-color: var(--fill-color-opc);
+    opacity: 0;
+    
+}
+.drink-percentage.transition::before{
+    transform: rotateZ(-5deg) translateY(-50px);
+    height: 50px;
+    opacity: 0;
+    
+}   
+
+
 .water-bottle p {
     font-size: 10px;
 }
@@ -98,13 +132,14 @@ body {
     color: white;
     background-color: var(--fill-color);
 }
+
 .small-bottles {
     display: flex;
     flex-wrap: wrap;
     width: 200px;
 }
 
-.text{
+.text {
     text-align: center;
     margin: 0 0 5px;
 }
