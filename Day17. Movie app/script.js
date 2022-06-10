@@ -7,6 +7,22 @@ const IMAGE_PATH = 'https://image.tmdb.org/t/p/w500'
 const searchForm = document.getElementById('search-form')
 const searchInput = document.getElementById('search')
 const moviesContainer = document.querySelector('.container')
+const scollBtn = document.querySelector('.scroll-up')
+window.onscroll = () => {
+    if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+        scollBtn.classList.add('active')
+    } else {
+        scollBtn.classList.remove('active')
+    }
+}
+scollBtn.addEventListener('click', () => {
+    // document.body.scrollTop = 0; // For Safari
+    // document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+
+    // this changes the scrolling behavior to "smooth"
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+
+})
 
 getMovies(MOVIES_URL)
 
@@ -23,16 +39,16 @@ function showMovies(movies) {
         const movieEl = document.createElement('div')
         movieEl.classList.add('movie')
         let rating_class = "green"
-       if(vote_average < 6){
-        rating_class = "red"
-       }else if(vote_average >=8){
-        rating_class = "green"
-       }else{
-        rating_class = "orange"
-       }
+        if (vote_average < 6) {
+            rating_class = "red"
+        } else if (vote_average >= 8) {
+            rating_class = "green"
+        } else {
+            rating_class = "orange"
+        }
 
         movieEl.innerHTML = `
-        <img src="${IMAGE_PATH+poster_path}"/>
+        <img src="${IMAGE_PATH + poster_path}"/>
         <div class="movie-info">
             <h3>${original_title}</h3>
             <span class="${rating_class}">${vote_average}</span>
