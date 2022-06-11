@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Heebo:wght=300@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@300&display=swap');
 
 :root{
     --primary-color:#fff;
@@ -60,6 +60,7 @@ body {
 .clock{
     width: 200px;
     height: 200px;
+    position: relative;
 }
 .needle{ 
     position: absolute;
@@ -69,19 +70,20 @@ body {
     height: 65px;
     transform-origin: bottom center;
     background-color: var(--secondary-color);
+    transition: transform .5s ease-in;
 }
 
 .needle.hour{
-    transform: translate(-50%,-100%);
+    transform: translate(-50%,-100%) rotate(0deg);
 }
 
 .needle.second{
-    transform: translate(-50%,-100%) ;
+    transform: translate(-50%,-100%) rotate(0deg);
     height: 100px;
     background-color: #e74c3c;
 }
 .needle.minute{
-    transform: translate(-50%,-100%) ;
+    transform: translate(-50%,-100%) rotate(0deg);
     height: 100px;
 }
 
@@ -107,15 +109,16 @@ body {
 .date span{
     background-color: var(--secondary-color);
     color: var(--primary-color);
-    padding: 2px;
+
     text-align: center;
     border-radius: 50%;
-    width: 15px;
-    height: 15px;
+    width: 20px;
+    height: 20px;
     display: inline-flex;
     justify-content: center;
     align-items: center;
     transition: .5s ease-in;
+    
 }
 .time {
     font-family: inherit;
