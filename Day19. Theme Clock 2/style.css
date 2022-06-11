@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@300&display=swap');
+
+:root{
+    --primary-color:#fff;
+    --secondary-color:#333;
+}
+
+html{
+    transition: .5s ease-in; 
+}
+html.dark{
+    --primary-color:#111;
+    --secondary-color:#f3f3f3;
+}
+
+html.dark{
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    
+}
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body {
+    font-family: 'Heebo';
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
+
+.mode-toggle {
+    cursor: pointer;
+    font-family: inherit;
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    border: 0;
+    border-radius: 3px;
+    padding: .25rem .5rem;
+    position: absolute;
+    top: 4rem;
+
+}
+.mode-toggle:focus{
+    outline: none;
+}
+
+.clock-container{
+    font-family: inherit;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    
+
+}
+.clock{
+    margin-bottom: 1rem;
+    width: 200px;
+    height: 200px;
+    position: relative;
+    padding: 2rem;
+    border: 2px solid var(--secondary-color);
+}
+.hours{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    
+}
+.hour-twelve{
+    position: absolute;
+    top: -2rem;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.hour-three{
+    position: absolute;
+    right: -2rem;
+    top: 50%;
+    transform: translateY(-50%);
+    margin: 3px;
+}
+
+.hour-six{
+    position: absolute;
+    bottom: -2rem;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.hour-nine{
+    position: absolute;
+    left: -2rem;
+    top: 50%;
+    transform: translateY(-50%);
+    margin: 3px;
+}
+.needle{ 
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 2px;
+    height: 65px;
+    transform-origin: bottom center;
+    background-color: var(--secondary-color);
+    transition: transform .5s ease-in;
+}
+
+.needle.hour{
+    transform: translate(-50%,-100%) rotate(0deg);
+}
+
+.needle.second{
+    transform: translate(-50%,-100%) rotate(0deg);
+    height: 85px;
+    background-color: #e74c3c;
+}
+.needle.minute{
+    transform: translate(-50%,-100%) rotate(0deg);
+    height: 85px;
+}
+
+.circle-point {
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    position: absolute;
+    background-color: var(--secondary-color);
+    border: 2px solid #e74c3c;
+}
+
+.date{
+    font-family: inherit;
+    font-size: 14px;
+    color: #bbb;
+    letter-spacing: .3px;
+    text-transform: uppercase;
+}
+.date span{
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+
+    text-align: center;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    transition: .5s ease-in;
+    
+}
+.time {
+    font-family: inherit;
+    font-size: 4rem;
+}
