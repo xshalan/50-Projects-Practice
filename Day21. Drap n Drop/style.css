@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@300&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body {
+    font-family: 'Heebo';
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+
+    background-color: steelblue;
+}
+
+.img-border{
+    width: 140px;
+    height: 140px;
+    background-color: white;
+    margin: 1rem;
+    border: 3px solid black;
+}
+.fill{
+    background-image: url('https://source.unsplash.com/random/140x140');
+    height: 135px;
+    cursor: pointer;
+}
+.hold{
+    border: solid 5px #ccc;
+}
+.hovered{
+    border-color: white;
+    border-style: dashed;
+    background-color: #333;
+}
+@media screen and (max-width: 720px) {
+    body{
+        flex-direction: column;
+    }
+  }
