@@ -5,14 +5,27 @@ const colorPicker = document.querySelector('.color')
 const increaseFont = document.querySelector('.increase')
 const decreaseFont = document.querySelector('.decrease')
 const reset = document.querySelector('.reset')
+const rectBtn = document.querySelector('.rect')
 
 let x, y
 let size = 5
 let isPressed = false
+let isRectPressed = false
 var color = '#000'
 colorPicker.addEventListener('change', (e) => {
     color = e.target.value
 })
+rectBtn.addEventListener('click', () => {
+    isRectPressed = true
+})
+function drawRect(x1, y1, x2, y2) {
+    ctx.beginPath();
+    ctx.rect(x1, y1, x2, y2);
+    ctx.strokeStyle = color;
+    ctx.lineWidth = size * 2;
+    ctx.stroke();
+}
+
 function drawCircle(x, y) {
     ctx.beginPath();
     ctx.arc(x, y, size, 0, Math.PI * 2, true); // Outer circle
@@ -34,22 +47,27 @@ canvas.addEventListener('mousedown', (e) => {
     isPressed = true
     x = e.offsetX
     y = e.offsetY
-    drawCircle(x, y)
+    if (!isRectPressed)
+        drawCircle(x, y)
 })
 canvas.addEventListener('mouseup', (e) => {
     isPressed = false
+    isRectPressed = false
     x = undefined
     y = undefined
 })
 
 canvas.addEventListener('mousemove', (e) => {
-    if (isPressed) {
-        x2 = e.offsetX
-        y2 = e.offsetY
+    x2 = e.offsetX
+    y2 = e.offsetY
+    if (isPressed && !isRectPressed) {
         drawCircle(x2, y2)
         drawLine(x, y, x2, y2)
         x = x2
         y = y2
+    } else if (isPressed && isRectPressed) {
+        ctx.clearRect(x, y,x2,y2)
+        drawRect(x, y, Math.abs(x2 - x), Math.abs(y2 - y))
     }
 })
 
@@ -58,7 +76,7 @@ const updateScreen = () => {
 }
 increaseFont.addEventListener('click', () => {
     size += 5
-    if(size>=50){
+    if (size >= 50) {
         size = 50
     }
     updateScreen()
@@ -67,7 +85,7 @@ increaseFont.addEventListener('click', () => {
 
 decreaseFont.addEventListener('click', () => {
     size -= 5
-    if(size<=5){
+    if (size <= 5) {
         size = 5
     }
     updateScreen()
