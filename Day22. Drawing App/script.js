@@ -7,7 +7,7 @@ const decreaseFont = document.querySelector('.decrease')
 const reset = document.querySelector('.reset')
 const rectBtn = document.querySelector('.rect')
 
-let x, y
+let x, y, largestX2 = 0, largestY2 = 0
 let size = 5
 let isPressed = false
 let isRectPressed = false
@@ -17,12 +17,13 @@ colorPicker.addEventListener('change', (e) => {
 })
 rectBtn.addEventListener('click', () => {
     isRectPressed = true
+    canvas.style.cursor = "crosshair";
 })
 function drawRect(x1, y1, x2, y2) {
     ctx.beginPath();
-    ctx.rect(x1, y1, x2, y2);
     ctx.strokeStyle = color;
     ctx.lineWidth = size * 2;
+    ctx.rect(x1, y1, x2, y2);
     ctx.stroke();
 }
 
@@ -55,6 +56,9 @@ canvas.addEventListener('mouseup', (e) => {
     isRectPressed = false
     x = undefined
     y = undefined
+    canvas.style.cursor = "default";
+    largestX2=0;
+    largestY2=0
 })
 
 canvas.addEventListener('mousemove', (e) => {
@@ -66,8 +70,13 @@ canvas.addEventListener('mousemove', (e) => {
         x = x2
         y = y2
     } else if (isPressed && isRectPressed) {
-        ctx.clearRect(x, y,x2,y2)
-        drawRect(x, y, Math.abs(x2 - x), Math.abs(y2 - y))
+        // TODO bug here 
+        //Clear Everything
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+        console.log('--------------')
+        drawRect(x, y, (x2 - x), (y2 - y) )
+
     }
 })
 
