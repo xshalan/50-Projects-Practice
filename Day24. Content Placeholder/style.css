@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body {
+    font-family: 'Roboto';
+    display: flex;
+    height: 100vh;
+    background-color: #ecf0f1;
+    overflow: hidden;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.card-header {
+    height: 200px;
+}
+
+.card-header img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+
+.card-container {
+    width: 300px;
+    border-radius: 10px;
+    background-color: white;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgb(0 0 0 / 20%);
+    ;
+}
+
+.card-content {
+    padding: 20px;
+}
+
+.card-content small {
+    color: #777;
+}
+
+.author {
+    display: flex;
+    margin: 20px 10px;
+}
+
+.author-img,
+.author img {
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+}
+
+.author-info {
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+    justify-content: space-between;
+    width: 50%;
+}
+
+.author-info #date {
+    font-size: smaller;
+    color: #777;
+}
+
+.animated-bg-text {
+    display: inline-block;
+    height: 10px;
+    width: 100%;
+    border-radius: 15px;
+}
+
+.animated-bg {
+    background: linear-gradient(to right, #eeeeee 10%, #dddddd 18%, #eeeeee 33%);
+    background-size: 200%;
+    animation: bgSlider 1s linear infinite;
+}
+
+@keyframes bgSlider {
+    0% {
+        background-position: 50% 0%;
+    }
+
+    100% {
+        background-position: -150% 0%;
+    }
+
+}
