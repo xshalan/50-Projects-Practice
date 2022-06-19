@@ -7,7 +7,7 @@ The projects are considered as mini-projects which develop some of the most feat
 I'll do my best to hit the 100th project as a daily practice. Just keep this here for reminder. 
 ### Milestones 
 To keep track and motivate me to work daily.
-- [ ] 25 Mini-Projects
+- [x] 25 Mini-Projects :star:
 - [ ] 50 Mini-Projects
 - [ ] 75 Mini-Projects
 - [ ] 100 Mini-Projects
