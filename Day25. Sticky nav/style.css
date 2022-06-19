@@ -13,6 +13,7 @@ body {
 .container {
     max-width: 1200px;
     margin: 0 auto;
+    padding: 0 30px;
 }
 .nav .container{
     display: flex;
@@ -119,3 +120,87 @@ body {
     line-height: 30px;
 
 }
+
+.menu-toggle{
+    background-color: transparent;
+    width: 40px;
+    height: 30px;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    border: 0;
+    display: none;
+    cursor: pointer;
+}
+
+.toggle-btn{
+    height: .25rem;
+    width: 70%;
+    border-radius: 5px;
+    background-color: white;
+    transition: all .3s ease-in-out;
+}
+nav.active .toggle-btn{
+    background-color: #333;
+}
+.menu-toggle.close .top{
+    transform: translate(20%,100%) rotate(-135deg);
+    transition: all .3s ease-in-out;
+}
+.menu-toggle.close .bottom{
+    transform: translate(20%,-240%) rotate(-230deg);
+    transition: all .3s ease-in-out;
+}
+.menu-toggle.close .center{
+    opacity: 0;
+    transform: translateX(300%);
+    display: none;
+    transition: all .4s ease;
+}
+.menu-toggle .center{
+    opacity: 1;
+    transform: translateX(0%);
+    display: block;
+}
+.nav.active .menu.mobile{
+    top: 3rem;
+}
+.menu.mobile{
+    position: absolute;
+    top: 4rem;
+    width: 100%;
+    left: 0;
+    color: black;
+    background-color: white;
+    transition: all .5s ease-in-out;
+}
+.menu.mobile li{
+    margin: 30px 20px;
+}
+.menu.mobile ul{
+    display: block;
+}
+@media (max-width: 900px) {
+    .container{
+        padding: 0 50px;
+    }
+
+    .nav .container,
+    .nav.active .container{
+        padding-left: 2rem; 
+    }
+    
+}
+
+@media (max-width: 560px) {
+    .nav ul{
+        display: none;
+    }
+    .menu-toggle{
+        display: inline-flex;
+    }
+    .hero h1{
+        font-size: 3rem;
+    }
+}
+
