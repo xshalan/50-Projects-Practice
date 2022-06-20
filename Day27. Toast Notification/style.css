@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2??family=Poppins&family=Roboto+Mono&display=swap');
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    background-color: rebeccapurple;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+
+.notification-btn {
+    font-family: inherit;
+    background-color: white;
+    border: none;
+    padding: 15px 20px;
+    border-radius: 5px;
+    margin: 8px;
+    color: rebeccapurple;
+    font-size: 12px;
+    font-weight: 500;
+    cursor: pointer;
+
+}
+.notification-btn:focus{
+    outline: none;
+}
+
+.notification-btn:active{
+    transform: scale(.98);
+}
+.notification-container {
+    position: fixed;
+    top: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: flex-end;
+    height: 100vh;
+    padding: 16px;
+}
+
+.notification {
+    font-family: inherit;
+    background-color: white;
+    border: none;
+    display: inline-block;
+    padding: 15px 20px;
+    border-radius: 5px;
+    margin: 8px;
+    transition: all .5s ease-in-out;
+}
