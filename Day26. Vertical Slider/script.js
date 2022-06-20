@@ -4,6 +4,17 @@ const slidesLength = slideLeft.querySelectorAll('div').length
 const slide_up = document.querySelector('.up-btn')
 const slide_down = document.querySelector('.down-btn')
 
+
+window.addEventListener('keydown', (e) => {
+    if (e.code === "ArrowUp") {
+        slide('up')
+    } else if (e.code === "ArrowDown") {
+        slide('down')
+    }
+})
+
+
+
 let activeSlideIndex = 0
 
 slideLeft.style.top = `-${(slidesLength - 1) * 100}vh`
