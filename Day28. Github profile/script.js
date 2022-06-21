@@ -27,9 +27,11 @@ async function getUser(username) {
         getRepos(username)
     } catch (err) {
         // if(err.response.status == 404) {
-        //     //createErrorCard('No profile with this username')
+        //     createErrorCard(user)
         // }
+        createErrorCard(username)
         console.log(err)
+
     }
 }
 
@@ -71,15 +73,21 @@ const createUserCard = (data) => {
 
                 <li>${data.public_repos}  <strong>Repos</strong></li>
             </ul>
-
-            
+     
             <div class="repos">
             
         </div>
 
         </div>
-
-        
-
     `
+}
+
+function createErrorCard(username) {
+    card_info.innerHTML = `
+    <div class="error">
+            <h2>No profile found for <strong>${username}</strong></h2>
+        </div>
+        `
+
+
 }

@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2??family=Poppins&family=Roboto+Mono&display=swap');
+
+:root{
+    --card-bg: #4c2885;
+}
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    background-color: #2a2a72;
+    font-family: 'Roboto Mono', sans-serif;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.search-form {
+    min-width: 40vw;
+}
+
+#search{
+    width: 100%;
+    background-color: var(--card-bg);
+    border: none;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+    color: white;
+}
+#search:focus{
+outline: none;
+}
+#search::placeholder{
+    color: #a1a1a1;
+}
+
+.card-info{
+    max-width: 50vw;
+    max-height: 300px;
+    background-color: #4c2885;
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.profile-img img{
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin: 2rem;
+    border: 5px solid #2a2a72;
+}
+
+.user-info {
+    color: white;
+    margin: 2rem 1rem;
+    font-family: inherit;
+}
+
+.user-info ul{
+    list-style: none;
+    display: flex;
+    align-items: flex-start;
+    justify-content: start;
+    padding: 10px 0;
+    font-size: small;
+}
+
+.user-info ul li{
+    margin-right: 2rem;
+}
+
+.repo{
+    background-color: #2a2a72;
+    text-decoration: none;
+    color: white;
+    font-size: x-small;
+    padding: 5px;
+    border-radius: 3px;
+    margin: 0 5px 5px 0;
+    display: inline-block;
+}
+
+.error {
+    padding: 4rem;
+    color: white;
+    font-size: medium;
+    box-shadow: 2px 2px 20px rgba(255, 0, 0, 0.29);
+    border-radius: 5px;
+}
+
+.error strong{
+    text-decoration: underline;
+}
