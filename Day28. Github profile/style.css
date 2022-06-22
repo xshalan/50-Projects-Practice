@@ -1,7 +1,15 @@
 @import url('https://fonts.googleapis.com/css2??family=Poppins&family=Roboto+Mono&display=swap');
 
-:root{
-    --card-bg: #4c2885;
+html.dark-theme {
+    --main-card-bg: #4c2885;
+    --body-bg: #2a2a72;
+    --text-color: white;
+}
+
+html.light-theme {
+    --main-card-bg: #6874e8;
+    --body-bg: #e8f0ff;
+    --text-color: #392759;
 }
 
 * {
@@ -11,7 +19,7 @@
 
 
 body {
-    background-color: #2a2a72;
+    background-color: var(--body-bg);
     font-family: 'Roboto Mono', sans-serif;
     display: flex;
     flex-direction: column;
@@ -19,32 +27,35 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
+    transition: .2s ease-in-out;
 }
 
 .search-form {
     min-width: 40vw;
 }
 
-#search{
+#search {
     width: 100%;
-    background-color: var(--card-bg);
+    background-color: var(--main-card-bg);
     border: none;
     padding: 1rem;
     border-radius: 10px;
     box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
-    color: white;
+    color: var(--text-color);
 }
-#search:focus{
-outline: none;
+
+#search:focus {
+    outline: none;
 }
-#search::placeholder{
+
+#search::placeholder {
     color: #a1a1a1;
 }
 
-.card-info{
+.card-info {
     max-width: 50vw;
     max-height: 300px;
-    background-color: #4c2885;
+    background-color: var(--main-card-bg);
     margin-top: 2rem;
     display: flex;
     justify-content: center;
@@ -53,21 +64,21 @@ outline: none;
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
 }
 
-.profile-img img{
+.profile-img img {
     width: 120px;
     height: 120px;
     border-radius: 50%;
     margin: 2rem;
-    border: 5px solid #2a2a72;
+    border: 6px solid var(--body-bg);
 }
 
 .user-info {
-    color: white;
+    color: var(--text-color);
     margin: 2rem 1rem;
     font-family: inherit;
 }
 
-.user-info ul{
+.user-info ul {
     list-style: none;
     display: flex;
     align-items: flex-start;
@@ -76,14 +87,14 @@ outline: none;
     font-size: small;
 }
 
-.user-info ul li{
+.user-info ul li {
     margin-right: 2rem;
 }
 
-.repo{
-    background-color: #2a2a72;
+.repo {
+    background-color: var(--body-bg);
     text-decoration: none;
-    color: white;
+    color: var(--text-color);
     font-size: x-small;
     padding: 5px;
     border-radius: 3px;
@@ -93,12 +104,103 @@ outline: none;
 
 .error {
     padding: 4rem;
-    color: white;
+    color: var(--text-color);
     font-size: medium;
     box-shadow: 2px 2px 20px rgba(255, 0, 0, 0.29);
     border-radius: 5px;
 }
 
-.error strong{
+.error strong {
     text-decoration: underline;
+}
+
+
+
+/* Change Theme color button */
+
+.theme-toggle-btn {
+    position: fixed;
+    top: 2rem;
+    right: 5rem;
+    width: 100px;
+    height: 50px;
+    background-color: var(--main-card-bg);
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    overflow: hidden;
+
+}
+
+
+.star {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 0;
+    transform: scale(.8);
+    overflow: hidden;
+}
+
+.star.sun {
+    background-color: #f6ae2d;
+    transition: transform .4s ease-in-out;
+}
+
+.star.moon {
+    background-color:  var(--main-card-bg);
+    position: absolute;
+    left: 0;
+    top: 0;
+    transform: scale(0);
+    transition: transform .4s ease-in-out .1s;
+    transform-origin: center left;
+}
+
+.dark-activated .star.sun {
+    transform: scale(.8) translateX(100%);
+}
+
+.dark-activated .star.moon {
+    transform: scale(.8) translateX(70%);
+}
+
+.stars {
+    position: absolute;
+    top: 10px;
+    left: 30%;
+    width: 100%;
+    height: 100%;
+    display: block;
+    transform: translateY(100%) translateX(-200%);
+    transition: all .4s ease-in-out;
+    opacity: 0;
+}
+
+.dark-activated .stars {
+    opacity: 1;
+    transform: translateY(0);
+
+}
+
+.stars::before {
+    content: '★';
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    color: white;
+    font-size: 10px;
+}
+
+.stars::after {
+    content: '★';
+    position: absolute;
+    right: 70%;
+    bottom: 50%;
+    width: 10px;
+    height: 10px;
+    color: white;
+    font-size: 5px;
 }
