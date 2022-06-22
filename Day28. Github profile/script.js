@@ -1,3 +1,4 @@
+const themeToggle = document.querySelector('.theme-toggle-btn')
 const GITHUB_API_URL = "https://api.github.com/users/"
 const REPO_API = '/repos?sort=created'
 
@@ -91,3 +92,20 @@ function createErrorCard(username) {
 
 
 }
+
+
+
+themeToggle.addEventListener('click', () => {
+    const html = document.querySelector('html')
+    if (themeToggle.classList.contains('dark-activated')) {
+        themeToggle.classList.remove('dark-activated')
+        html.classList.remove('dark-theme')
+        html.classList.add('light-theme')
+    } else {
+        themeToggle.classList.add('dark-activated')
+        html.classList.add('dark-theme')
+        html.classList.remove('light-theme')
+    }
+
+})
+
