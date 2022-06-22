@@ -4,7 +4,7 @@ A try to refresh and practice daily `CSS` and `Javascript`. All projects here ba
 
 The projects are considered as mini-projects which develop some of the most features we see over the web. Even if the course is easy and most projects can be completed in less than hour, I gain a lot of knowledge. 
 ## Future Projects
-I'll do my best to hit the 100th project as a daily practice. Just keep this here for reminder. 
+I'll do my best to hit the 100th project as a daily practice. Just keep this here as a reminder. 
 ### Milestones 
 To keep track and motivate me to work daily.
 - [x] 25 Mini-Projects :star:
