@@ -67,6 +67,9 @@ h2 {
   border: 0;
   background-color: #3b3b98;
 }
+.copy:active{
+  transform: scale(.98);
+}
 
 .copy:focus {
   outline: none;
@@ -101,4 +104,10 @@ h2 {
 
 .generate-password:focus{
   outline: none;
+}
+.generate-password:active{
+  transform: scale(.98);
+}
+.generate-password:hover{
+  box-shadow: 0px 2px 10px rgba(255, 255, 255, 0.1);
 }
