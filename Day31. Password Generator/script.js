@@ -14,6 +14,20 @@ const randomFunc = {
     hasSymbol: getRandomSymbol,
 }
 
+clipboardEl.addEventListener('click', () => {
+    if (resultEl.value !== '') {
+        resultEl.select();
+        resultEl.setSelectionRange(0, 99999);
+        /* Copy the text inside the text field */
+        navigator.clipboard.writeText(resultEl.value);
+
+        /* Alert the copied text */
+        alert("Password Copied to clipboard: " + resultEl.value);
+    }
+
+
+})
+
 generateEl.addEventListener('click', () => {
     const length = lengthEl.value
     const hasUpper = upperEl.checked
@@ -28,11 +42,11 @@ function generatePassword(hasUpper, hasLower, hasNumber, hasSymbol, length) {
     let generatedPassword = ""
     const typesCount = hasLower + hasNumber + hasSymbol + hasUpper
     const typesArr = [{ hasLower }, { hasNumber }, { hasSymbol }, { hasUpper }].filter(item => Object.values(item)[0])
-    
-    if(typesCount===0)
+
+    if (typesCount === 0)
         return ''
 
-    for (let index = 0; index < length; index +=typesCount ) {
+    for (let index = 0; index < length; index += typesCount) {
         typesArr.forEach(type => {
             const funcName = Object.keys(type)[0]
             console.log(funcName)
@@ -41,7 +55,7 @@ function generatePassword(hasUpper, hasLower, hasNumber, hasSymbol, length) {
         });
     }
 
-    const finalPassword = generatedPassword.slice(0,length)
+    const finalPassword = generatedPassword.slice(0, length)
     return finalPassword
 }
 function getRandomLower() {
