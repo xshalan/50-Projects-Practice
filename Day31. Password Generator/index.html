@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <title>Password Generator</title>
+</head>
+
+<body>
+  <div class="card">
+    <h2>Password Generator</h2>
+    <div class="password-input">
+      <input type="text" id="result" class="input" disabled>
+      <button class="copy" id="clipboard"><i class="fa-regular fa-clipboard"></i></button>
+    </div>
+    <div class="features">
+      <div class="feature">
+        <p class="feature-title">Password Length</p>
+        <input type="number" value="8" class="password-length" id="password_length">
+      </div>
+
+      <div class="feature">
+        <p class="feature-title">Include uppercase letters</p>
+        <input type="checkbox" class="password-checkbox" id="uppercase_chkbox" checked="true">
+      </div>
+
+      <div class="feature">
+        <p class="feature-title">Include lowercase letters</p>
+        <input type="checkbox" class="password-checkbox" id="lowercase_chkbox" checked="true">
+      </div>
+
+      <div class="feature">
+        <p class="feature-title">Include numbers</p>
+        <input type="checkbox" class="password-checkbox" id="number_chkbox" checked="true">
+      </div>
+
+      <div class="feature">
+        <p class="feature-title">Include symbole</p>
+        <input type="checkbox" class="password-checkbox" id="symbol_chkbox" checked="true">
+      </div>
+
+
+    </div>
+
+    <button id="generate-password" class="generate-password" >Generate Password</button>
+  </div>
+  <script src="script.js"></script>
+</body>
+
+</html>
