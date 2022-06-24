@@ -38,9 +38,7 @@ function generatePassword(hasUpper, hasLower, hasNumber, hasSymbol, length) {
             console.log(funcName)
             console.log(randomFunc[funcName])
             generatedPassword += randomFunc[funcName]()
-            console.log(generatedPassword)
         });
-        console.log(generatedPassword)
     }
 
     const finalPassword = generatedPassword.slice(0,length)
