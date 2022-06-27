@@ -53,6 +53,7 @@ body {
 }
 
 .note{
+  background-color: white;
   margin: 30px 16px;
   width: 300px;
   min-height: 300px;
@@ -77,4 +78,8 @@ body {
   resize: none;
   color: black;
   font-size: 14px;
+}
+
+.main{
+  margin: 6px;
 }

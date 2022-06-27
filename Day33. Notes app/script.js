@@ -1,11 +1,13 @@
-
 const add = document.querySelector('.add')
 
+const notes = JSON.parse(localStorage.getItem('notes'))
+if(notes!= null )
+    notes.forEach(note=> addNewNote(note))
 
 
 add.addEventListener('click', () => addNewNote())
 
-function addNewNote() {
+function addNewNote(text = '') {
     const noteEl = document.createElement('div')
     noteEl.classList.add('note')
     noteEl.innerHTML = `
@@ -14,28 +16,47 @@ function addNewNote() {
         <button class="delete"><i class="fa-regular fa-trash-can"></i></button>
       </div>
 
-      <div class="hidden"></div>
-      <textarea></textarea>
+      <div class="main ${text ? '' : "hidden"} "></div>
+      <textarea class=${text ? "hidden" : ''}></textarea>
     `
-    document.body.appendChild(noteEl)
 
     const clear = noteEl.querySelector('.delete')
     const edit = noteEl.querySelector('.edit')
     const textarea = noteEl.querySelector('textarea')
+    const main = noteEl.querySelector('.main')
+
+    textarea.value = text
+    main.innerHTML = marked(text)
+
+
 
     clear.addEventListener('click', () => {
         noteEl.remove()
+        updateLocalStorage()
     })
 
     edit.addEventListener('click', () => {
-        if(textarea.disabled){
-            textarea.disabled = false
-        }else{
-            textarea.disabled = true
-        }
+        console.log(textarea.disabled)
+        textarea.classList.toggle('hidden')
+        main.classList.toggle('hidden')
     })
 
-    
+    textarea.addEventListener('input', (e) => {
+        const { value } = e.target
+
+        main.innerHTML = marked(value)
+        updateLocalStorage()
+
+    })
+    document.body.appendChild(noteEl)
+}
+
+function updateLocalStorage(){
+    const notesText = document.querySelectorAll('textarea')
+    const notes = []
+    notesText.forEach(note=>notes.push(note.value))
+    localStorage.setItem('notes',JSON.stringify(notes))
+
 }
 
 
