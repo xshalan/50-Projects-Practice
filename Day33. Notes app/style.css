@@ -57,6 +57,7 @@ body {
   margin: 30px 16px;
   width: 300px;
   min-height: 300px;
+  max-height: 400px;
   box-shadow: 0 10px 10px rgba(0, 0, 0, .1);
 }
 
@@ -82,4 +83,6 @@ body {
 
 .main{
   margin: 6px;
+  height: 300px;
+  overflow-y: scroll;
 }
