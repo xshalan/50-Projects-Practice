@@ -20,6 +20,7 @@ body {
 }
 
 .slider{
+  overflow: hidden;
   display: flex; 
   transition: transform .3s ease-in-out;
 }
