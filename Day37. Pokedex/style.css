@@ -63,3 +63,9 @@ body {
 .pokemon .info .type{
   margin: 10px 0 7px;
 }
+
+.pokemon:hover{
+  transform: scale(1.2);
+  box-shadow: 0px 15px 15px rgba(0, 0, 0, .3);
+  transition: .2s ease-in-out;
+}
