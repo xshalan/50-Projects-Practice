@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: plum;
+  font-family: 'Roboto', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  height: 100vh;
+}
+
+.mobile-container {
+  width: 260px;
+  height: 450px;
+  border: 2px solid white;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+}
+
+.mobile-screen {
+  width: 100%;
+  height: 100%;
+  background-color: lightgray;
+}
+
+.mobile-screen img {
+  width: 100%;
+  object-fit: cover;
+  object-position: center center;
+  animation: fade .5s linear  both ;
+}
+
+
+
+.mobile-menu {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  left: 0;
+  height: 55px;
+  background-color: white;
+  border-bottom: 1px solid lightgray;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+
+}
+
+.mobile-menu .menu-item {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  font-size: .8rem;
+  color: darkgray;
+}
+
+.menu-item:hover,
+.menu-item.menu-item-active {
+  color: purple;
+  cursor: pointer;
+}
+
+.menu-item span {
+  font-size: .7rem;
+}
+@keyframes fade {
+  0%{
+    opacity: 0;
+  }
+
+  50%{
+    opacity: .5;
+  }
+  100%{
+    opacity: 1;
+  }
+  
+}
