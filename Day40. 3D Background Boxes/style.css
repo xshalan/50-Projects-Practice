@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+  background-color: #fafafa;
+}
+
+.magic-button {
+  background-color: #f9ca24;
+  padding: .5rem 1rem;
+  border: 0;
+  color: white;
+  box-shadow: 0 3px  rgba(249,202,36,.5);
+  position: fixed;
+  font-size: 16px;
+  border-radius: 3px;
+  top: 20px;
+  right: 10rem;
+  z-index: 100;
+}
+.magic-button:focus {
+  outline: none;
+}
+
+.magic-button:active {
+  transform: translateY(2px);
+  box-shadow: none;
+}
+.boxes{ 
+  width: 500px ;
+  height: 500px ;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-top: 1rem;
+}
+
+.boxes.big{
+  width: 600px;
+  height: 600px;
+}
+
+.boxes.big .box{
+  transform: rotate(360deg);
+  transition: .2s ease;
+}
+.box{
+  width: 125px;
+  height: 125px;
+  background: url('https://c.tenor.com/1e79hBnV2IUAAAAM/in-the-navy-homer-simpson.gif');
+  background-repeat: no-repeat;
+  background-size: 500px 500px;
+  position: relative;
+  transition: .2s ease;
+}
+
+.box::after{
+  content: '';
+  background-color: #f9ca24;
+  position: absolute;
+  top: 8px;
+  right: -15px;
+  width: 15px;
+  height: 100%;
+  transform: skewY(45deg);
+}
+
+.box::before{
+  content: '';
+  background-color: #f9ca24;
+  position: absolute;
+  bottom: -15px;
+  right: -8px;
+  width: 100%;
+  height: 15px;
+  transform: skewX(45deg);
+}
