@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Muli:wght@400;700&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Muli', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+}
+
+.logo {
+  width: 100px;
+}
+
+.text{
+  text-transform: uppercase;
+}
+
+.nav-btn{
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  font-size: 20px;
+}
+
+.open-btn{
+  position: fixed;
+  left: 1rem;
+  top: 1rem;
+}
+
+.nav{
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100vh;
+  transform: translateX(-100%);
+  transition: all .4s ease-in-out;
+}
+
+.nav.visible{
+  transform: translateX(0);
+}
+.nav-black.visible{
+  transition-delay: 0s;
+}
+.nav-red.visible{
+  transition-delay: .2s;
+}
+.nav-white.visible{
+  transition-delay: .4s;
+}
+.nav-black{
+  background-color: black;
+  width: 60%;
+  max-width: 430px;
+  transition-delay: .4s;
+}
+.nav-red{
+  background-color: red;
+  width: 95%;
+  transition-delay: .2s;
+}
+.nav-white{
+  background-color: white;
+  width: 95%;
+  padding: 3rem;
+  position: relative;
+  transition-delay: 0s;
+}
+
+.close-btn{
+  position: absolute;
+  right: 1rem;
+  top: 3rem;
+  opacity: .3;
+}
