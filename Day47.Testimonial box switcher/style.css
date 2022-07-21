@@ -1,11 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 
 * {
   box-sizing: border-box;
 }
 
 body {
-  font-family: 'Roboto', sans-serif;
+  background-color: #f4f4f4;
+  font-family: 'Montserrat', sans-serif;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -13,4 +14,68 @@ body {
   height: 100vh;
   overflow: hidden;
   margin: 0;
+}
+
+.container{
+  background-color: #475ce4;
+  color: white;
+  border-radius: 10px;
+  margin: 20px auto;
+  padding:  50px 80px;
+  max-width: 768px;
+  position: relative;
+}
+.container p {
+  line-height: 28px;
+  font-size: 14px;
+}
+.fa-quote{
+  color: rgba(255, 255, 255, .3);
+  position: absolute;
+  top: 70px;
+  font-size: 30px;
+}
+
+.fa-quote-right{
+  right: 40px;
+}
+
+
+.fa-quote-left{
+  left: 40px;
+}
+
+.user-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.user-container img{
+  width: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center;
+}
+.user-container .user-info{
+  margin: 0 10px;
+}
+.username{
+  margin: 0;
+}
+.role{
+  margin: 6px 0;
+}
+.progress-bar{
+  width: 100%;
+  height: 4px;
+  background-color: white;
+  animation: grow 10s linear infinite;
+  transform-origin: left
+}
+
+@keyframes grow {
+  0%{
+    transform: scaleX(0);
+  }
+  
 }
