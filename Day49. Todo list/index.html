@@ -7,18 +7,20 @@
     <title>Todo list</title>
   </head>
   <body>
-    <h1>Todos</h1>
-    <div class="todo-container">
-      <input type="text" class="todo_input" id="todo_input">
+    <h1 class="todo_title">Todos</h1>
+    <form class="todo-form">
+      <input type="text" class="todo_input" id="todo_input" placeholder="Enter your todo">
       <div class="todos_container">
         <ul class="todo_list">
-          <li class="todo_list_item">Todo</li>
+          <li class="todo_list_item todo_list_item_completed">Todo</li>
         </ul>
       </div>
-      <div class="todo_info">
-        <span class="todo_info_item complete_action">Left click to toggle completed.</span>
-        <span class="todo_info_item delete_action">Right click to delete todo</span>
-      </div>
+      
+    </form>
+
+    <div class="todo_info">
+      <span class="todo_info_item complete_action">Left click to toggle completed.</span>
+      <span class="todo_info_item delete_action">Right click to delete todo</span>
     </div>
     <script src="script.js"></script>
   </body>
