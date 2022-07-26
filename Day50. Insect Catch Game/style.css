@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #516dff;
+  color: #fff;
+  font-family: 'Press Start 2P', sans-serif;
+  height: 100vh;
+  margin: 0;
+  overflow: hidden;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  transition: margin .5s ease-in-out;
+}
+
+.play-game {
+  font-size: .8rem;
+}
+
+.play-game-btn {
+  font-family: inherit;
+  font-size: .7rem;
+  padding: .8rem 1.5rem;
+  color: #516dff;
+  background-color: white;
+  border: 0;
+  margin: 1rem 0;
+  cursor: pointer;
+}
+
+.play-game-btn:hover {
+  background-color: rgba(255, 255, 255, .8);
+}
+
+.hero.up {
+  margin-top: -100vh;
+}
+
+.hero.select-insect {
+  display: flex;
+  flex-direction: column;
+}
+
+.select-insect-box-img {
+  height: 5rem;
+}
+
+.select-insect-title {
+  font-size: 2rem;
+  margin-bottom: 3rem;
+}
+
+.select-insect-container {
+  display: flex;
+  width: 50vw;
+  justify-content: center;
+
+  align-items: center;
+
+}
+
+.select-insect-box {
+  width: 8rem;
+  height: 8rem;
+  display: block;
+  text-align: center;
+  border: 1px solid white;
+  margin: 0 1rem;
+  padding: 1rem;
+}
+
+.select-insect-box-name {
+  display: block;
+  font-size: .7rem;
+  margin: .3rem 0;
+}
+
+.select-insect-box:hover {
+  background-color: white;
+  color: #516dff;
+  cursor: pointer;
+
+}
+
+.hero .game-screen {
+  position: relative;
+}
+
+.board {
+  position: absolute;
+  top: 1rem;
+  font-weight: bold;
+}
+.board.game-screen-time{
+  left: 1rem;
+}
+.board.game-screen-score{
+  right: 1rem;
+}
+.game-screen-insect{
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+}
+.game-screen-insect:focus{
+  outline: none;
+}
