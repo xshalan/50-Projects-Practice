@@ -99,7 +99,7 @@ body {
 
 }
 
-.hero .game-screen {
+.hero.game-screen {
   position: relative;
 }
 
@@ -121,4 +121,39 @@ body {
 }
 .game-screen-insect:focus{
   outline: none;
+}
+
+.game-screen-play{
+  height: 100%;
+  width: 100%;
+  margin: 3rem ;
+}
+
+.game-screen-insect{
+  position: absolute;
+}
+
+.game-screen.hidden{
+  display: none;
+}
+
+.alert{
+  width: 100%;
+  height: 70px;
+  background-color: rgba(0,0,0,.3);
+  text-align: center;
+  font-size: .7rem;
+  position: absolute;
+  top: -100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: top .3s ease-in-out;
+}
+.alert p{
+  line-height: 1.3rem;
+}
+
+.alert.show{
+  top: 100px;
 }
