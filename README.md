@@ -8,6 +8,6 @@ I'll do my best to hit the 100th project as a daily practice. Just keep this her
 ### Milestones 
 To keep track and motivate me to work daily.
 - [x] 25 Mini-Projects :star:
-- [x] 50 Mini-Projects
+- [x] 50 Mini-Projects :star: :star:
 - [ ] 75 Mini-Projects
 - [ ] 100 Mini-Projects
