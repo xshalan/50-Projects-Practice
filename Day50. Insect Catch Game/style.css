@@ -149,6 +149,7 @@ body {
   align-items: center;
   justify-content: center;
   transition: top .3s ease-in-out;
+  z-index: 10;
 }
 .alert p{
   line-height: 1.3rem;
