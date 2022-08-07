@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+:root {
+  --dark-grey: #333333;
+  --light-grey: #555;
+  --light-grey-2: #888;
+  --border-grey: #CFCFCF;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  background-color: #1C60BB;
+}
+
+
+.menu {
+  margin: 0 auto;
+  width: 70rem;
+  background: #F7F6F5;
+  border-top: 1px solid var(--border-grey);
+}
+.menu__main {
+  width: 90%;
+  margin: 0 auto;
+}
+.menu__item {
+  display: inline-block;
+  font-size: 0.9rem;
+  font-weight: 800;
+  color: #292929;
+  padding: 0.5rem 2rem;
+  border-bottom: 1px solid var(--border-grey);
+  margin: 0 -1px;
+}
+.menu__main__item--hovered,
+.menu__item:hover {
+  background: white;
+  border-bottom: none;
+  border-right: 1px solid #CFCFCF;
+  border-left: 1px solid #CFCFCF;
+  margin: 0 -2px;
+
+}
+
+.menu__item__link.active {
+  border-bottom: 2px solid #333;
+  padding-bottom: 0.3rem;
+
+}
+
+.menu__item__link {
+  text-decoration: none;
+  color: #555;
+  font-family: 'Roboto';
+  font-size: 0.9rem;
+  font-weight: 800;
+}
+
+.menu__item__link:hover {
+  text-decoration: underline;
+  color: #1C60BB;
+}
+
+.sub-menu {
+  width: 100%;
+  height: 15rem;
+  background: white;
+  display: block
+  ;
+}
+
+.menu__sub__categories {
+  width: calc(40% - 2px);
+  display: inline-block;
+  padding: 0.5rem;
+  vertical-align: top;
+}
+
+.menu__sub__visual {
+  display: inline-block;
+  width: calc(60% - 2px);
+  padding: 0.5rem;
+}
+
+.menu__sub__visual__img {
+  width: 100%;
+}
+
+.menu__sub__categories__category {
+  display: inline-block;
+  width: calc(50% - 2px);
+  vertical-align: top;
+}
+
+.menu__sub__categories__header {
+  font-size: 0.9rem;
+  border-bottom: 1px solid var(--light-grey-2);
+  padding-bottom: .5rem;
+}
+
+.menu__sub__categories__items {
+  list-style: none;
+  color: var(--light-grey);
+  padding: 0;
+  font-size: 0.9rem;
+  line-height: 1.4rem;
+}
+
+.menu__sub__categories__item:hover{
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.hidden{
+  display: none;
+}
